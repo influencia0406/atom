@@ -302,7 +302,7 @@ class AtomApplication
     ipcMain.on 'add-recent-document', (event, filename) ->
       app.addRecentDocument(filename)
 
-    ipc.on 'check-for-update', =>
+    ipcMain.on 'check-for-update', =>
       @autoUpdateManager.check()
 
     ipcMain.on 'execute-javascript-in-dev-tools', (event, code) ->
